@@ -52,7 +52,7 @@ Overview
 
 - 拉取项目代码
 ```bash
-git clone https://gitee.com/null_897_5856/peeplus.git peeplus
+git clone https://github.com/i5yi/peeplus.git peeplus
 cd peeplus
 ```
 
