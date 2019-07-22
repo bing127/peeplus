@@ -1,6 +1,6 @@
-*.css linguist-language=Python
-*.js linguist-language=Python
-*.css linguist-language=Python
-*.html linguist-language=Python
-*.vue linguist-language=Python
-*.py linguist-language=Python
+*.css linguist-language=python
+*.js linguist-language=python
+*.css linguist-language=python
+*.html linguist-language=python
+*.vue linguist-language=python
+*.py linguist-language=python
