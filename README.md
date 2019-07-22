@@ -7,8 +7,8 @@
 
 
 - 项目说明
-> 1、基于flask和vue打造的前后端分离项目
-> 2、前后端只依赖于token
+> 1、基于flask和vue打造的前后端分离项目<br>
+> 2、前后端只依赖于token<br>
 > 3、前端vue动态路由
 
 - 前端项目路径: ~@/app/templates/frontEnd
