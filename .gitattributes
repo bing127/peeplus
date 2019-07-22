@@ -3,3 +3,4 @@
 *.css linguist-language=Python
 *.html linguist-language=Python
 *.vue linguist-language=Python
+*.py linguist-language=Python
