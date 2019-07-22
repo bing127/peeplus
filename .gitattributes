@@ -1,6 +1,1 @@
-*.css linguist-language=python
-*.js linguist-language=python
-*.css linguist-language=python
-*.html linguist-language=python
-*.vue linguist-language=python
-*.py linguist-language=python
+app/* linguist-vendored
