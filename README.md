@@ -1,7 +1,9 @@
 <h1 align="center">peeplus 后台管理系统</h1>
-![peeplus License](https://img.shields.io/badge/peeplus-MIT-brightgreen.svg)
-![peeplus Release](https://img.shields.io/badge/peeplus-V1.0.1-brightgreen.svg)
 
+[![peeplus Release][version-image]] [![peeplus License][Release-image]]
+
+[version-image]: https://img.shields.io/badge/peeplus-MIT-brightgreen.svg
+[Release-image]: https://img.shields.io/badge/peeplus-V1.0.1-brightgreen.svg
 
 
 - 项目说明
