@@ -3,7 +3,6 @@ import { UserLayout, BasicLayout, RouteView, BlankLayout, PageView } from '@/lay
 import { bxAnaalyse } from '@/core/icons'
 
 export const asyncRouterMap = [
-
   {
     path: '/',
     name: 'index',
@@ -349,19 +348,6 @@ export const constantRouterMap = [
         path: 'register-result',
         name: 'registerResult',
         component: () => import(/* webpackChunkName: "user" */ '@/views/user/RegisterResult')
-      }
-    ]
-  },
-
-  {
-    path: '/test',
-    component: BlankLayout,
-    redirect: '/test/home',
-    children: [
-      {
-        path: 'home',
-        name: 'TestHome',
-        component: () => import('@/views/Home')
       }
     ]
   },

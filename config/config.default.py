@@ -4,7 +4,7 @@
 项目启动配置
 '''
 SERVER_DEBUG = True
-SERVER_PORT = 8989
+SERVER_PORT = 8181
 SERVER_HOST = '0.0.0.0'
 
 '''

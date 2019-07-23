@@ -49,14 +49,15 @@ class UserService():
         if len(result) > 0:
             for i in result:
                 jsons = {
-                    "name": i.name,
                     "id": i.id,
-                    "permissionId": i.component,
+                    "parent_id": i.parent_id,
+                    "name": i.name,
+                    "alias": i.alias,
+                    "icon": i.icon,
+                    "sort": i.sort,
+                    "layout": i.layout,
+                    "permission": i.permission,
                     "actions": '' if i.actions is None else json.loads(i.actions, encoding='utf-8'),
-                    "meta": {
-                        "title": i.name,
-                        "icon": i.icon
-                    }
                 }
                 dict_list.append(jsons)
         info['role']['permissions'] = dict_list
