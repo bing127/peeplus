@@ -33,7 +33,7 @@ export const generator = (routerMap, parent) => {
       // 该路由对应页面的 组件
       component: constantRouterComponents[item.layout],
       // meta: 页面标题, 菜单图标, 页面权限(供指令权限用，可去掉)
-      meta: { title: item.alias, icon: item.icon || undefined, permission: item.permission && [ item.permission ] || null, actions: item.actionList }
+      meta: { title: item.alias, icon: item.icon || undefined, keepAlive: item.keep, permission: item.permission && [ item.permission ] || null, actions: item.actionList }
     }
     // 为了防止出现后端返回结果不规范，处理有可能出现拼接出两个 反斜杠
     currentRouter.path = currentRouter.path.replace('//', '/')

@@ -1,7 +1,6 @@
 import Vue from 'vue'
-import router from './router'
+import router, { resetRouter } from '@/router'
 import store from './store'
-
 import NProgress from 'nprogress' // progress bar
 import 'nprogress/nprogress.css' // progress bar style
 import notification from 'ant-design-vue/es/notification'
@@ -26,10 +25,10 @@ router.beforeEach((to, from, next) => {
           .dispatch('GetInfo')
           .then(res => {
             const roles = res.result && res.result.role
+            resetRouter()
             store.dispatch('GenerateRoutes', { roles }).then(() => {
               // 根据roles权限生成可访问的路由表
               // 动态添加可访问路由表
-              console.log(JSON.stringify(store.getters.addRouters))
               router.addRoutes(store.getters.addRouters)
               const redirect = decodeURIComponent(from.query.redirect || to.path)
               if (to.path === redirect) {
@@ -59,7 +58,7 @@ router.beforeEach((to, from, next) => {
       // 在免登录白名单，直接进入
       next()
     } else {
-      next({ path: '/user/login', query: { redirect: to.fullPath } })
+      next({ path: '/user/login', query: { redirect: '/dashboard/workplace' } })
       NProgress.done() // if current page is login will not trigger afterEach hook, so manually handle it
     }
   }

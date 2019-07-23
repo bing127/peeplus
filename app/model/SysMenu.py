@@ -12,6 +12,7 @@ class SysMenu(db.Model):
     alias = db.Column(db.String(255))
     permission = db.Column(db.String(255))
     layout = db.Column(db.String(255))
+    keep = db.Column(db.String(1))
     actions = db.Column(db.Text)
     icon = db.Column(db.String(30))
     sort = db.Column(db.Integer, server_default=db.FetchedValue())

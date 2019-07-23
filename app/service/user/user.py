@@ -57,6 +57,7 @@ class UserService():
                     "sort": i.sort,
                     "layout": i.layout,
                     "permission": i.permission,
+                    "keep": False if not i.keep else True,
                     "actions": None if not i.actions else json.loads(i.actions, encoding='utf-8'),
                 }
                 dict_list.append(jsons)
