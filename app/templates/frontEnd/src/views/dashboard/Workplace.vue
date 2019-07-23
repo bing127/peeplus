@@ -111,7 +111,6 @@
   </page-view>
 </template>
 
-
 <script>
 import { timeFix } from '@/utils/util'
 import { mapGetters } from 'vuex'
@@ -191,19 +190,19 @@ export default {
     this.user = this.userInfo
     this.avatar = this.userInfo.avatar
 
-    getRoleList().then(res => {
-      // console.log('workplace -> call getRoleList()', res)
-    })
-
-    getServiceList().then(res => {
-      // console.log('workplace -> call getServiceList()', res)
-    })
+    // getRoleList().then(res => {
+    //   // console.log('workplace -> call getRoleList()', res)
+    // })
+    //
+    // getServiceList().then(res => {
+    //   // console.log('workplace -> call getServiceList()', res)
+    // })
   },
   mounted () {
-    this.getProjects()
-    this.getActivity()
-    this.getTeams()
-    this.initRadar()
+    // this.getProjects()
+    // this.getActivity()
+    // this.getTeams()
+    // this.initRadar()
   },
   methods: {
     ...mapGetters(['nickname', 'welcome']),

@@ -9,7 +9,7 @@ const constantRouterComponents = {
   PageView: PageView,
   analysis: () => import('@/views/dashboard/Analysis'),
   workplace: () => import('@/views/dashboard/Workplace'),
-  menu: () => import('@/views/sys/menu')
+  menu: () => import('@/views/sys/Menu')
 }
 
 // 404页面
@@ -39,7 +39,9 @@ export const generator = (routerMap, parent) => {
     // 为了防止出现后端返回结果不规范，处理有可能出现拼接出两个 反斜杠
     currentRouter.path = currentRouter.path.replace('//', '/')
     // 重定向
-    item.redirect && (currentRouter.redirect = item.redirect)
+    if (item.id === '1') {
+      item.redirect = '/dashboard/center'
+    }
     // 是否有子菜单，并递归处理
     if (item.children && item.children.length > 0) {
       // Recursion
@@ -70,7 +72,7 @@ const permission = {
           name: 'index',
           component: BasicLayout,
           meta: { title: '首页' },
-          redirect: '/dashboard/workplace',
+          redirect: '/dashboard/center',
           children: routers
         }
         commit('SET_ROUTERS', json)

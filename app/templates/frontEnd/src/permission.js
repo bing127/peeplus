@@ -17,7 +17,7 @@ router.beforeEach((to, from, next) => {
   if (Vue.ls.get(ACCESS_TOKEN)) {
     /* has token */
     if (to.path === '/user/login') {
-      next({ path: '/dashboard/workplace' })
+      next({ path: '/dashboard/center' })
       NProgress.done()
     } else {
       if (store.getters.roles.length === 0) {
@@ -58,7 +58,7 @@ router.beforeEach((to, from, next) => {
       // 在免登录白名单，直接进入
       next()
     } else {
-      next({ path: '/user/login', query: { redirect: '/dashboard/workplace' } })
+      next({ path: '/user/login', query: { redirect: '/dashboard/center' } })
       NProgress.done() // if current page is login will not trigger afterEach hook, so manually handle it
     }
   }
