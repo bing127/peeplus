@@ -83,8 +83,8 @@
               <a>操作四</a>
               <a>操作五</a>
               <a>操作六</a>
-              <a-button size="small" type="primary" ghost icon="plus" v-show=" $route.meta.actions.includes('add') ">添加</a-button>
-              <a-button size="small" type="primary" ghost icon="plus" v-show=" $route.meta.actions.includes('delete') ">删除</a-button>
+              <a-button size="small" type="primary" ghost icon="plus" v-show=" $route.meta.actions && $route.meta.actions.includes('add') ">添加</a-button>
+              <a-button size="small" type="primary" ghost icon="plus" v-show=" $route.meta.actions && $route.meta.actions.includes('delete') ">删除</a-button>
             </div>
           </a-card>
           <a-card title="XX 指数" style="margin-bottom: 24px" :loading="radarLoading" :bordered="false" :body-style="{ padding: 0 }">
@@ -190,19 +190,19 @@ export default {
     this.user = this.userInfo
     this.avatar = this.userInfo.avatar
 
-    // getRoleList().then(res => {
-    //   // console.log('workplace -> call getRoleList()', res)
-    // })
+    getRoleList().then(res => {
+      // console.log('workplace -> call getRoleList()', res)
+    })
 
-    // getServiceList().then(res => {
-    //   // console.log('workplace -> call getServiceList()', res)
-    // })
+    getServiceList().then(res => {
+      // console.log('workplace -> call getServiceList()', res)
+    })
   },
   mounted () {
-    // this.getProjects()
-    // this.getActivity()
-    // this.getTeams()
-    // this.initRadar()
+    this.getProjects()
+    this.getActivity()
+    this.getTeams()
+    this.initRadar()
   },
   methods: {
     ...mapGetters(['nickname', 'welcome']),

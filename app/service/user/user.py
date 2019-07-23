@@ -57,7 +57,7 @@ class UserService():
                     "sort": i.sort,
                     "layout": i.layout,
                     "permission": i.permission,
-                    "actions": '' if i.actions is None else json.loads(i.actions, encoding='utf-8'),
+                    "actions": None if not i.actions else json.loads(i.actions, encoding='utf-8'),
                 }
                 dict_list.append(jsons)
         info['role']['permissions'] = dict_list

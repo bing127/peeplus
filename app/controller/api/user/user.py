@@ -29,9 +29,21 @@ def auth_login():
         return jsonify(AjaxJson.jsonFn(message='用户不存在或密码错误', success=False))
 
 
+'''
+获取用户信息
+'''
 @route_api.route("/user/info", methods=['GET'])
 @auth_jwt
 def user_info():
     user_id = session['current_user']
     user_infos = UserService.user_menu(user_id)
     return jsonify(AjaxJson.jsonFn(result=user_infos))
+
+'''
+退出登录
+'''
+@route_api.route( "/user/logout" )
+def logout():
+    session['current_user'] = None
+    g.current_user = None
+    return jsonify(AjaxJson.jsonFn(message='退出成功', success=True))
