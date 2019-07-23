@@ -8,7 +8,8 @@ const constantRouterComponents = {
   RouteView: RouteView,
   PageView: PageView,
   analysis: () => import('@/views/dashboard/Analysis'),
-  workplace: () => import('@/views/dashboard/Workplace')
+  workplace: () => import('@/views/dashboard/Workplace'),
+  menu: () => import('@/views/sys/menu')
 }
 
 // 404页面

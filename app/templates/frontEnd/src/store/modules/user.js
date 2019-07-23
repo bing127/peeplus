@@ -2,7 +2,7 @@ import Vue from 'vue'
 import { login, getInfo, logout } from '@/api/login'
 import { ACCESS_TOKEN } from '@/store/mutation-types'
 import { welcome, totree } from '@/utils/util'
-import { resetRouter } from '@/router'
+import { resetRouter } from '../../router'
 
 const user = {
   state: {
@@ -87,8 +87,8 @@ const user = {
       return new Promise((resolve) => {
         commit('SET_TOKEN', '')
         commit('SET_ROLES', [])
-        Vue.ls.remove(ACCESS_TOKEN)
         resetRouter()
+        Vue.ls.remove(ACCESS_TOKEN)
         logout(state.token).then(() => {
           resolve()
         }).catch(() => {

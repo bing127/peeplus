@@ -111,6 +111,7 @@
   </page-view>
 </template>
 
+
 <script>
 import { timeFix } from '@/utils/util'
 import { mapGetters } from 'vuex'
